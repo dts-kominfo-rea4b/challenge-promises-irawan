@@ -23,8 +23,7 @@ const promiseOutput = async (emosi) => {
       //console.log(totalMood);
     }
   }
-
-  
+ 
   return totalEmosi;
 };
 
