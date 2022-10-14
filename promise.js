@@ -2,8 +2,6 @@ const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
 
 // TODO: Buat fungsi promiseOutput sesuai ketentuan readme
 //const promiseOutput = null;
-
-
 //const marah = true;
 //const ApakahMarah = new Promise((resolve, reject) => {
      //if(marah)
@@ -12,22 +10,22 @@ const { promiseTheaterIXX, promiseTheaterVGC } = require("./external.js");
      //let tdkmrh=tdkmrh+1;
 //})
 
-const promiseOutput = async (mood) => {
+const promiseOutput = async (emosi) => {
   const theaterIXX = await promiseTheaterIXX();
   const theaterVGC = await promiseTheaterVGC();
 
   const concateJson = theaterIXX.concat(theaterVGC);
-  let totalMood = 0;
+  let totalEmosi = 0;
 
   for (i = 0; i < concateJson.length; i++) {
-    if (concateJson[ i ].hasil == mood) {
-      totalMood += 1;
+    if (concateJson[ i ].hasil == emosi) {
+      totalEmosi += 1;
       //console.log(totalMood);
     }
   }
 
   
-  return totalMood;
+  return totalEmosi;
 };
 
 //console.log("Total Mood :"+totalMood);
